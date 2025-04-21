@@ -1,48 +1,53 @@
-# pass.in 
+# pass.in 🎟️
 
-O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**.
+**pass.in** is an application for **managing participants in in-person events**.
 
-A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
+The platform allows event organizers to create events and open a public registration page.
 
-Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
+Registered participants can generate a badge (credential) to check in on the event day.
 
-O sistema fará um scan de credencial do participante para permitir a entrada no evento. 
+The system scans the participant’s badge (via QR code) to authorize entry into the event.
 
-## Requisitos
+---
 
-### Requisitos funcionais
+## ✅ Requirements
 
-- [X] O organizador deve poder cadastrar um novo evento;
-- [X] O organizador deve poder visualizar dados de um evento;
-- [X] O organizador deve poder visualizar a lista de participantes;
-- [X] O participante deve poder se inscrever em um evento;
-- [X] O participante deve poder visualizar seu crachá de inscrição;
-- [X] O participante deve poder realizar check-in no evento;
+### Functional Requirements
 
-### Regras de negócio 
+- [x] Organizers must be able to register a new event.
+- [x] Organizers must be able to view event details.
+- [x] Organizers must be able to view a list of participants.
+- [x] Participants must be able to register for an event.
+- [x] Participants must be able to view their registration badge.
+- [x] Participants must be able to check in at the event.
 
-- [X] O participante só pode se inscrever em um evento uma única vez;
-- [X] O participante só pode se inscrever em eventos com vagas disponíveis;
-- [X] O participante só pode realizar check-in em um evento uma única vez;
+### Business Rules
 
-### Requisitos não-funcionais
+- [x] A participant can only register for an event once.
+- [x] A participant can only register for events with available spots.
+- [x] A participant can only check in to an event once.
 
-- [X] O check-in no evento será realizado através de um QRCode;
+### Non-Functional Requirements
 
-### Comandos para executar o projeto
+- [x] Event check-in is performed through a QR Code.
 
-## Seed
-  npx prisma seed
+---
 
-## Executar em modo de desenvolvimento
-  npm run dev
+## 🚀 How to Run the Project
 
-## Executar em modo de produção
-  npm run build (Para gerar a aplicação e converter para Javascript)
-  npm start (Para iniciar a aplicação)
-## Executar migrations
-  npm run db:migrate
+### Seed the database
 
-## Executar o Prisma Studio
-  npm run db:studio
+```bash
+npx prisma seed
+```
 
+### Run in production mode
+```bash
+npm run build
+npm start
+```
+
+### Run database migrations
+```bash
+npm run db:migrate
+```
